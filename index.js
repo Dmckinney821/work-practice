@@ -23,7 +23,7 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
-if (process.env.NODE_ENV === 'produciton') {
+if (process.env.NODE_ENV === 'production') {
     //Express will serve up production assests like main
     app.use(express.static('client/build'));
     //express will serve index.html if doens't recognize route
